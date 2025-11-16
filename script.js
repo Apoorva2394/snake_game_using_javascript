@@ -76,6 +76,7 @@ if (
     head.y >= cols
 ) {
     clearInterval(intervalId);
+    clearInterval(timerId);   
     modall.style.display="flex";
     startgameModal.style.display="none";
     gameoverModal.style.display="flex";
@@ -147,6 +148,8 @@ startButton.addEventListener("click",()=>{
 })
 restartBtn.addEventListener("click",restartgame)
 function restartgame(){
+    clearInterval(intervalId);  
+    clearInterval(timerId);
     blocks[`${food.x}-${food.y}`].classList.remove("food");
     snake.forEach(segment => {
         blocks[`${segment.x}-${segment.y}`].classList.remove("fill")
