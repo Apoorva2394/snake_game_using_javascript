@@ -108,9 +108,6 @@ if (
     });
   }
   
-intervalId=setInterval(() => {
-    render();
-  }, 600);
   
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") {
@@ -128,12 +125,11 @@ intervalId=setInterval(() => {
 });
 
 startButton.addEventListener("click",()=>{
-    clearInterval(intervalId);   
-    clearInterval(timerId);   
+    clearInterval(intervalId);  
     modall.style.display="none";
-    intervalId=setInterval(() => {
+    intervalId = setInterval(() => {
         render();
-      }, 600)
+    }, 600);
       timerId=setInterval(()=>{
         let [min, sec] = time.split("-").map(Number);
 
