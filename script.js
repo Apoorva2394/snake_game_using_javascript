@@ -128,6 +128,8 @@ intervalId=setInterval(() => {
 });
 
 startButton.addEventListener("click",()=>{
+    clearInterval(intervalId);   
+    clearInterval(timerId);   
     modall.style.display="none";
     intervalId=setInterval(() => {
         render();
