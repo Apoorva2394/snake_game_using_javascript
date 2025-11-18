@@ -13,7 +13,8 @@ overflow: hidden;
     /* Background Colors */
     --bg-primary-color: #0c0c0c;
     --bg-fill-color: #fdfdfc;
-    --bg-food-color: #ff9a7e;
+    --food-color: #ffcc66;
+    --bg-head-color: #ff9a7e;
     /* Text Colors */
     --text-primary-color: #f0f0f0;
 
@@ -100,8 +101,12 @@ section .infos{
     background-color: var(--bg-fill-color);
 }
 
+.head{
+    background-color: var(--bg-head-color);
+}
+
 .food{
-    background-color: var(--bg-food-color);
+    background-color: var(--food-color);
 }
 
 .modal {
@@ -117,14 +122,16 @@ section .infos{
   }
   
 .modal .start-game,
-.modal .game-over{
+.modal .game-over,
+.modal .game-pause{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:var(--space-lg);
 }
 
-.modal .game-over{
+.modal .game-over,
+.modal .game-pause{
     display: none; 
 }
 
